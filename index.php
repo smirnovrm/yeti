@@ -144,6 +144,11 @@ $list_item = [
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
+        <?php foreach($list_category as $key=>$item)  : ?>
+	        <li class="nav__item">
+		        <a href="<?=$key?>.html"><?=$item?></a>
+	        </li>
+        <?php endforeach; ?>
             <li class="nav__item">
                 <a href="all-lots.html">Доски и лыжи</a>
             </li>
