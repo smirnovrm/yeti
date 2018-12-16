@@ -21,3 +21,10 @@ function renderTemplate($path, $param=null) {
 function esc($str) {
 	return htmlspecialchars($str);
 }
+
+function timer() {
+	$ts  = time();
+	$ndts = strtotime('tomorrow');
+	$delta = $ndts - $ts;
+	return floor($delta/3600) . ' часов';
+}

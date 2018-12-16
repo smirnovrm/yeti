@@ -41,7 +41,7 @@
 							<span class="lot__cost"><?=priceFormat(esc($value['price']));?></span>
 						</div>
 						<div class="lot__timer timer">
-
+							<?=timer();?>
 						</div>
 					</div>
 				</div>
