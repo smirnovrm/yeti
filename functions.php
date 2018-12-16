@@ -17,3 +17,7 @@ function renderTemplate($path, $param=null) {
 	}
 	return require_once '';
 }
+
+function esc($str) {
+	return htmlspecialchars($str);
+}
