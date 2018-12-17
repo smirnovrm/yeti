@@ -25,6 +25,8 @@ function esc($str) {
 function timer() {
 	$ts  = time();
 	$ndts = strtotime('tomorrow');
-	$delta = $ndts - $ts;
-	return floor($delta/3600) . ' часов';
+	$delta_h = floor(($ndts - $ts)/3600);
+	$delta = (($ndts - $ts)/3600) - $delta_h;
+	$delta_m = ($delta * 60)/100 + 0.01;
+	return $delta_h . ':' . substr($delta_m, 2, 2);
 }
